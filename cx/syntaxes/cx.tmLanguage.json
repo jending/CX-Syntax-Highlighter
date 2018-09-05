@@ -3,6 +3,12 @@
   "name": "CX",
   "patterns": [
     {
+      "include": "#commentlines"
+    },
+    {
+      "include": "#operators"
+    },
+    {
       "include": "#variables"
     },
     {
@@ -18,16 +24,24 @@
       "include": "#nativefunctions"
     },
     {
-      "include": "#operators"
-    },
-    {
       "include": "#strings"
-    },
-    {
-      "include": "#commentlines"
     }
   ],
   "repository": {
+    "commentlines": {
+      "name": "comment.line.cx",
+      "begin": "//",
+      "end": "\n",
+      "patterns": []
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name":"keyword.operator.new.cx",
+          "match": "==|!=|>=|>|<=|<|&&|\\|\\||!true|\\+|-|\\*|/|%|\\|"
+        }
+      ]
+    },
     "variables": {
       "patterns": [
         {
@@ -68,14 +82,6 @@
         }
       ]
     },
-    "operators": {
-      "patterns": [
-        {
-          "name":"support.function.cx",
-          "match": "==|!=|>=|>|<=|<|&&"
-        }
-      ]
-    },
     "strings": {
       "name": "string.quoted.double.cx",
       "begin": "\"",
@@ -86,13 +92,7 @@
           "match": "\\\\."
         }
       ]
-    },
-    "commentlines": {
-      "name": "comment.line.cx",
-      "begin": "//",
-      "end": "\n",
-      "patterns": []
     }
-  },
+  }, 
   "scopeName": "source.cx"
 }
