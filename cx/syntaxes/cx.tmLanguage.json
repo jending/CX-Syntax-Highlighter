@@ -1,0 +1,59 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "CX",
+	"patterns": [
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#commentlines"
+		}
+	],
+	"repository": {
+		"variables": {
+			"patterns": [{
+				"name": "variable.name.cx",
+				"match": "\\b(i32|f32|f64|str|bool)\\b"
+			}]
+		},
+		"types": {
+			"patterns": [{
+				"name": "support.type.property-name.cx",
+				"match": "\\b(struct)\\b"
+			}]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.cx",
+				"match": "\\b(var|func|package|import|type|if|printf|for)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.cx",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.cx",
+					"match": "\\\\."
+				}
+			]
+		},
+		"commentlines": {
+			"name": "comment.line.cx",
+			"begin": "//",
+			"end": "\n",
+			"patterns":[]
+		}
+	},
+	"scopeName": "source.cx"
+}
