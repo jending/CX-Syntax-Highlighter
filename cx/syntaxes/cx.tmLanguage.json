@@ -3,6 +3,9 @@
   "name": "CX",
   "patterns": [
     {
+      "include": "#commentblocks"
+    },
+    {
       "include": "#commentlines"
     },
     {
@@ -21,24 +24,27 @@
       "include": "#metacommands"
     },
     {
-      "include": "#nativefunctions"
-    },
-    {
       "include": "#strings"
     }
   ],
   "repository": {
+    "commentblocks": {
+      "name": "comment.line.cx",
+      "begin": "/\\*",
+      "end": "\\*/",
+      "patterns": []
+    },
     "commentlines": {
       "name": "comment.line.cx",
       "begin": "//",
       "end": "\n",
       "patterns": []
-    },
+    }, 
     "operators": {
       "patterns": [
         {
           "name":"keyword.operator.new.cx",
-          "match": "==|!=|>=|>|<=|<|&&|\\|\\||!true|\\+|-|\\*|/|%|\\|"
+          "match": "==|!=|>=|>|<=|<|&&|\\|\\||!true|&\\^|\\+=|-=|\\*=|%=|/=|\\+|-|\\*|/|%|&=|\\|=|\\^=|\\||\\^|:=|="
         }
       ]
     },
@@ -46,7 +52,7 @@
       "patterns": [
         {
           "name": "variable.name.cx",
-          "match": "\\b(i32|i64|f32|f64|str|bool)\\b"
+          "match": "\\b(i32|i64|f32|f64|str|bool|byte)\\b"
         }
       ]
     },
@@ -62,7 +68,7 @@
       "patterns": [
         {
           "name": "keyword.control.cx",
-          "match": "\\b(var|func|package|import|type|if|for|true|false)\\b"
+          "match": "\\b(var|func|package|import|type|true|false|return|else|goto|if and|if or|if|for)\\b"
         }
       ]
     },
@@ -71,14 +77,6 @@
         {
           "name": "meta.selector.cx",
           "match":":\\b(dProgram|dState|dStack|step|package|func|struct|rem|aff|clauses|object|objects|query|dQuery)\\b" 
-        }
-      ]
-    },
-    "nativefunctions": {
-      "patterns": [
-        {
-          "name": "support.function.cx",
-          "match": "\\b(printf|printStr|printI32|readI32|addI32|divI32|addI64|addF32|addF64|writeF32|setClauses|setQuery|addObject|byteAToStr|i32ToF32|evolve)\\b"
         }
       ]
     },
