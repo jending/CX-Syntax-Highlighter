@@ -1,59 +1,98 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "CX",
-	"patterns": [
-		{
-			"include": "#variables"
-		},
-		{
-			"include": "#types"
-		},
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		},
-		{
-			"include": "#commentlines"
-		}
-	],
-	"repository": {
-		"variables": {
-			"patterns": [{
-				"name": "variable.name.cx",
-				"match": "\\b(i32|f32|f64|str|bool)\\b"
-			}]
-		},
-		"types": {
-			"patterns": [{
-				"name": "support.type.property-name.cx",
-				"match": "\\b(struct)\\b"
-			}]
-		},
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.cx",
-				"match": "\\b(var|func|package|import|type|if|printf|for)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.cx",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.cx",
-					"match": "\\\\."
-				}
-			]
-		},
-		"commentlines": {
-			"name": "comment.line.cx",
-			"begin": "//",
-			"end": "\n",
-			"patterns":[]
-		}
-	},
-	"scopeName": "source.cx"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "CX",
+  "patterns": [
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#metacommands"
+    },
+    {
+      "include": "#nativefunctions"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#commentlines"
+    }
+  ],
+  "repository": {
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.name.cx",
+          "match": "\\b(i32|i64|f32|f64|str|bool)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "support.type.property-name.cx",
+          "match": "\\b(struct)\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.cx",
+          "match": "\\b(var|func|package|import|type|if|for|true|false)\\b"
+        }
+      ]
+    },
+    "metacommands": {
+      "patterns": [
+        {
+          "name": "meta.selector.cx",
+          "match":":\\b(dProgram|dState|dStack|step|package|func|struct|rem|aff|clauses|object|objects|query|dQuery)\\b" 
+        }
+      ]
+    },
+    "nativefunctions": {
+      "patterns": [
+        {
+          "name": "support.function.cx",
+          "match": "\\b(printf|printStr|printI32|readI32|addI32|divI32|addI64|addF32|addF64|writeF32|setClauses|setQuery|addObject|byteAToStr|i32ToF32|evolve)\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name":"support.function.cx",
+          "match": "==|!=|>=|>|<=|<|&&"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.cx",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.cx",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "commentlines": {
+      "name": "comment.line.cx",
+      "begin": "//",
+      "end": "\n",
+      "patterns": []
+    }
+  },
+  "scopeName": "source.cx"
 }
