@@ -24,6 +24,9 @@
       "include": "#metacommands"
     },
     {
+      "include": "#testcommands"
+    },
+    {
       "include": "#nativefunctions"
     },
     {
@@ -80,6 +83,14 @@
         {
           "name": "meta.selector.cx",
           "match":":\\b(dProgram|dState|dStack|step|package|func|struct|rem|aff|clauses|object|objects|query|dQuery)\\b" 
+        }
+      ]
+    },
+    "testcommands": {
+      "patterns": [
+        {
+          "name": "support.function.cx",
+          "match":"test.\\b(start|str|error|stop)\\b" 
         }
       ]
     },
