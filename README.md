@@ -10,7 +10,7 @@ Organizes CX keywords, variable types, operators, and native function names into
 ## Requirements
 Requires Visual Studio Code :)
 
-This extension hasn't been published to the VS Code extension marketplace yet Q __ Q. You can consume it by copying the repo's master/CX folder into your %userprofile%\.vscode\extensions folder.
+This extension hasn't been published to the VS Code extension marketplace yet Q __ Q. You can consume it by copying the repo's master/CX folder into your %userprofile%\\.vscode\extensions folder.
 
 ## Known Issues
 --
