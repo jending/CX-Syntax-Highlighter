@@ -1,4 +1,4 @@
-# CX-Syntax-Highlighter
+# CX Syntax Highlighter
 Here is a work-in-progress syntax highlighter for the CX programming language! This language support extension has been made for Visual Studio Code. https://code.visualstudio.com/
 
 ## Features
