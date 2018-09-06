@@ -6,7 +6,7 @@ Organizes CX keywords, variable types, operators, and native function names into
 
 For example if there is an image subfolder under your extension project workspace:
 
-[[https://github.com/username/repository/blob/master/img/octocat.png|alt=octocat]]
+[[https://github.com/jending/CX-Syntax-Highlighter/blob/master/demo_screenshot.png|alt=demoimage]]
 
 
 ## Requirements
