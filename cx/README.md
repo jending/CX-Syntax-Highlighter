@@ -1,10 +1,10 @@
 # cx README
 
-This is the README for your extension "cx". After writing up a brief description, we recommend including the following sections.
+Here is a work-in-progress syntax highlighter for the CX programming language! This is a language support extension made for Visual Studio code. https://code.visualstudio.com/
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Organizes CX keywords, variable types, operators, and native function names into syntax groupings to be consumed by VS Code. Data is from https://github.com/skycoin/cx and https://www.skycoin.net/blog/overview/cx-overview/.
 
 For example if there is an image subfolder under your extension project workspace:
 
@@ -14,7 +14,7 @@ For example if there is an image subfolder under your extension project workspac
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+This extension hasn't been published to the VS Code extension marketplace yet Q __ Q. Try it out yourself by copying the CX folder 
 
 ## Extension Settings
 
