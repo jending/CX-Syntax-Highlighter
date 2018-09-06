@@ -6,7 +6,7 @@ Organizes CX keywords, variable types, operators, and native function names into
 
 For example if there is an image subfolder under your extension project workspace:
 
-\!\[feature X\]\(images/feature-x.png\)
+[[https://github.com/username/repository/blob/master/img/octocat.png|alt=octocat]]
 
 
 ## Requirements
