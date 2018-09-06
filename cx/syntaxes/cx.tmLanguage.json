@@ -24,6 +24,9 @@
       "include": "#metacommands"
     },
     {
+      "include": "#nativefunctions"
+    },
+    {
       "include": "#strings"
     }
   ],
@@ -77,6 +80,14 @@
         {
           "name": "meta.selector.cx",
           "match":":\\b(dProgram|dState|dStack|step|package|func|struct|rem|aff|clauses|object|objects|query|dQuery)\\b" 
+        }
+      ]
+    },
+    "nativefunctions": {
+      "patterns": [
+        {
+          "name": "support.function.cx",
+          "match": "\\b(printf|printStr|printI32|readI32|addI32|divI32|addI64|addF32|addF64|writeF32|setClauses|setQuery|addObject|byteAToStr|i32ToF32|evolve|print|add|sub|mul|eq|uneq|gt|gteq|lt|lteq|not|div|mod|bitshl|bitshr|bitand|bitor|bitxor|bitclear|halt|read|allow|obj|reject|query|execute|search|serialize|deserialize)\\b"
         }
       ]
     },
